@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dayue.tech/sitemap.xml
