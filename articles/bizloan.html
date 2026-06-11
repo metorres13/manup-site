@@ -28,6 +28,19 @@ li{font-size:15px;margin-bottom:8px;color:#333}
 .cta p{font-size:13px;color:#aaa;margin-bottom:16px}
 .cta .wx{font-size:22px;font-weight:700;color:#f59e0b;margin:12px 0}
 .cfoot{text-align:center;margin-top:16px;font-size:12px;color:#666}
+
+/* 微信弹窗 */
+.qr-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center}
+.qr-overlay.show{display:flex}
+.qr-popup{background:#fff;border-radius:16px;padding:36px;text-align:center;max-width:360px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.3);position:relative}
+.qr-popup img{width:200px;height:200px;border-radius:12px;margin:12px 0}
+.qr-popup h3{font-size:20px;font-weight:600;margin-bottom:4px}
+.qr-popup p{font-size:14px;color:#86868b;margin-bottom:16px}
+.qr-popup .copy-btn{display:inline-block;background:#f5f5f7;padding:8px 20px;border-radius:20px;font-size:14px;cursor:pointer;border:none;color:#1d1d1f;margin-top:8px}
+.qr-popup .copy-btn:hover{background:#eeeef0}
+.qr-popup .close-btn{position:absolute;top:12px;right:16px;font-size:24px;color:#aaa;cursor:pointer;border:none;background:none;line-height:1}
+.qr-popup .close-btn:hover{color:#1d1d1f}
+.qr-popup .copied-msg{color:#2e7d32;font-size:12px;margin-top:6px;display:none}
 </style>
 </head>
 <body>
@@ -91,5 +104,25 @@ li{font-size:15px;margin-bottom:8px;color:#333}
   <div class="cfoot">线上咨询 · 隐私保障 · 不收取前期费用</div>
 <div style="font-size:11px;color:#999;margin-top:8px">具体放款由合作持牌机构操作</div>
 </div>
+
+<!-- 微信二维码弹窗 -->
+<div class="qr-overlay" id="qrOverlay" onclick="hideQR(event)">
+  <div class="qr-popup" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="hideQR()">&times;</button>
+    <h3>扫码加微信</h3>
+    <p>微信 weiona13 · 扬州本地</p>
+    <img src="../weixin-qr.jpg" alt="微信二维码 weiona13" width="200" height="200">
+    <p style="font-size:12px;color:#aaa;">长按识别或保存后扫码</p>
+    <button class="copy-btn" onclick="copyWechat()">📋 复制微信号</button>
+    <p class="copied-msg" id="copiedMsg">✓ weiona13 已复制到剪贴板</p>
+  </div>
+</div>
+
+<script>
+function showQR(){document.getElementById('qrOverlay').classList.add('show');document.body.style.overflow='hidden';}
+function hideQR(e){if(e&&e.target!==document.getElementById('qrOverlay'))return;document.getElementById('qrOverlay').classList.remove('show');document.body.style.overflow='';}
+function copyWechat(){navigator.clipboard.writeText('weiona13').then(function(){var m=document.getElementById('copiedMsg');m.style.display='block';setTimeout(function(){m.style.display='none';},2000);});}
+</script>
+
 </body>
 </html>

@@ -116,5 +116,25 @@
 </div>
 
 </article>
+
+<!-- 微信二维码弹窗 -->
+<div class="qr-overlay" id="qrOverlay" onclick="hideQR(event)">
+  <div class="qr-popup" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="hideQR()">&times;</button>
+    <h3>扫码加微信</h3>
+    <p>微信 weiona13 · 扬州本地</p>
+    <img src="../weixin-qr.jpg" alt="微信二维码 weiona13" width="200" height="200">
+    <p style="font-size:12px;color:#aaa;">长按识别或保存后扫码</p>
+    <button class="copy-btn" onclick="copyWechat()">📋 复制微信号</button>
+    <p class="copied-msg" id="copiedMsg">✓ weiona13 已复制到剪贴板</p>
+  </div>
+</div>
+
+<script>
+function showQR(){document.getElementById('qrOverlay').classList.add('show');document.body.style.overflow='hidden';}
+function hideQR(e){if(e&&e.target!==document.getElementById('qrOverlay'))return;document.getElementById('qrOverlay').classList.remove('show');document.body.style.overflow='';}
+function copyWechat(){navigator.clipboard.writeText('weiona13').then(function(){var m=document.getElementById('copiedMsg');m.style.display='block';setTimeout(function(){m.style.display='none';},2000);});}
+</script>
+
 </body>
 </html>

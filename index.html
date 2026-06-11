@@ -71,6 +71,18 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);-webkit-b
 .steps .text p{font-size:13px;color:#86868b}
 footer{text-align:center;padding:40px 24px;color:#86868b;font-size:13px}
 hr.divider{max-width:200px;margin:0 auto;border:0;border-top:1px solid #e8e8ea}
+/* 微信弹窗 */
+.qr-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center}
+.qr-overlay.show{display:flex}
+.qr-popup{background:#fff;border-radius:16px;padding:36px;text-align:center;max-width:360px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.3);position:relative}
+.qr-popup img{width:200px;height:200px;border-radius:12px;margin:12px 0}
+.qr-popup h3{font-size:20px;font-weight:600;margin-bottom:4px}
+.qr-popup p{font-size:14px;color:#86868b;margin-bottom:16px}
+.qr-popup .copy-btn{display:inline-block;background:#f5f5f7;padding:8px 20px;border-radius:20px;font-size:14px;cursor:pointer;border:none;color:#1d1d1f;margin-top:8px}
+.qr-popup .copy-btn:hover{background:#eeeef0}
+.qr-popup .close-btn{position:absolute;top:12px;right:16px;font-size:24px;color:#aaa;cursor:pointer;border:none;background:none;line-height:1}
+.qr-popup .close-btn:hover{color:#1d1d1f}
+.qr-popup .copied-msg{color:#2e7d32;font-size:12px;margin-top:6px;display:none}
 </style>
 </head>
 <body>
@@ -83,7 +95,7 @@ hr.divider{max-width:200px;margin:0 auto;border:0;border-top:1px solid #e8e8ea}
       <a href="#emotion">情感</a>
       <a href="#growth">成长</a>
       <a href="#articles">文章</a>
-      <a href="#contact">联系(微信)</a>
+      <a href="javascript:void(0)" onclick="showQR()">联系(微信)</a>
     </div>
   </div>
 </nav>
@@ -91,7 +103,7 @@ hr.divider{max-width:200px;margin:0 auto;border:0;border-top:1px solid #e8e8ea}
 <div class="hero">
   <h1>男人遇到坎<br>不是能力问题，是没找对资源</h1>
   <p>资金周转 · 情感关系 · 个人成长<br>我们从你最急迫的问题开始解决<br><small style="font-size:13px;color:#aaa">具体放款由合作持牌机构操作</small></p>
-  <a class="btn" href="#contact">加微信 weiona13</a>
+  <a class="btn" href="javascript:void(0)" onclick="showQR()">加微信 weiona13</a>
 </div>
 
 <hr class="divider">
@@ -226,13 +238,15 @@ hr.divider{max-width:200px;margin:0 auto;border:0;border-top:1px solid #e8e8ea}
       <h4>初次约会：不给她拒绝的机会</h4>
       <p>正确的顺序是先确定吸引力，再约会</p>
     </a>
-  </div<div class="section-title" style="margin-top:40px">
+  </div>
+
+  <div class="section-title" style="margin-top:40px">
     <h3 style="font-size:20px">流程 & 常见问题</h3>
   </div>
   <div style="max-width:600px;margin:0 auto">
     <div class="faq-item">
       <h4>1. 在线评估（10分钟）</h4>
-      <p>提供车辆信息，线上估算额度。加微信 weiona13 直接聊。</p>
+      <p>提供车辆信息，线上估算额度。<a href="javascript:void(0)" onclick="showQR()" style="color:#1d1d1f;text-decoration:underline;">加微信 weiona13</a> 直接聊。</p>
     </div>
     <div class="faq-item">
       <h4>2. 验车签约（当天）</h4>
@@ -255,5 +269,31 @@ hr.divider{max-width:200px;margin:0 auto;border:0;border-top:1px solid #e8e8ea}
 
 <hr class="divider">
 
+</div>
 
->
+<footer>
+  <p>UP 男性成长 · 扬州</p>
+  <p style="margin-top:8px;font-size:12px;">扫码加微信 weiona13</p>
+</footer>
+
+<!-- 微信二维码弹窗 -->
+<div class="qr-overlay" id="qrOverlay" onclick="hideQR(event)">
+  <div class="qr-popup" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="hideQR()">&times;</button>
+    <h3>扫码加微信</h3>
+    <p>微信 weiona13 · 扬州本地</p>
+    <img src="weixin-qr.jpg" alt="微信二维码 weiona13" width="200" height="200">
+    <p style="font-size:12px;color:#aaa;">长按识别或保存后扫码</p>
+    <button class="copy-btn" onclick="copyWechat()">📋 复制微信号</button>
+    <p class="copied-msg" id="copiedMsg">✓ weiona13 已复制到剪贴板</p>
+  </div>
+</div>
+
+<script>
+function showQR(){document.getElementById('qrOverlay').classList.add('show');document.body.style.overflow='hidden';}
+function hideQR(e){if(e&&e.target!==document.getElementById('qrOverlay'))return;document.getElementById('qrOverlay').classList.remove('show');document.body.style.overflow='';}
+function copyWechat(){navigator.clipboard.writeText('weiona13').then(function(){var m=document.getElementById('copiedMsg');m.style.display='block';setTimeout(function(){m.style.display='none';},2000);});}
+</script>
+
+</body>
+</html>
