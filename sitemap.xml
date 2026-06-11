@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://dayue.tech/</loc><priority>1.0</priority></url>
+  <url><loc>https://dayue.tech/articles/finance.html</loc><priority>0.9</priority></url>
+  <url><loc>https://dayue.tech/articles/shejiao.html</loc><priority>0.9</priority></url>
+  <url><loc>https://dayue.tech/articles/body.html</loc><priority>0.9</priority></url>
+  <url><loc>https://dayue.tech/articles/mind.html</loc><priority>0.9</priority></url>
+  <url><loc>https://dayue.tech/articles/action.html</loc><priority>0.9</priority></url>
   <url><loc>https://dayue.tech/articles/carloan.html</loc><priority>0.8</priority></url>
+  <url><loc>https://dayue.tech/articles/yangzhou-chedidai.html</loc><priority>0.8</priority></url>
+  <url><loc>https://dayue.tech/articles/bank-products.html</loc><priority>0.8</priority></url>
+  <url><loc>https://dayue.tech/articles/bank-reject.html</loc><priority>0.8</priority></url>
+  <url><loc>https://dayue.tech/articles/biz-bank.html</loc><priority>0.8</priority></url>
   <url><loc>https://dayue.tech/articles/debt.html</loc><priority>0.8</priority></url>
   <url><loc>https://dayue.tech/articles/credit.html</loc><priority>0.8</priority></url>
   <url><loc>https://dayue.tech/articles/loanfix.html</loc><priority>0.8</priority></url>
   <url><loc>https://dayue.tech/articles/bizloan.html</loc><priority>0.8</priority></url>
+  <url><loc>https://dayue.tech/articles/lixi-duibi.html</loc><priority>0.8</priority></url>
+  <url><loc>https://dayue.tech/articles/yidaiyangdai-shangan.html</loc><priority>0.8</priority></url>
+  <url><loc>https://dayue.tech/articles/nanren-30sui.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/relationship.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/relationship-talk.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/relationship-list.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/breakup.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/breakup-list.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/style.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/frame.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/shit-test.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/signals.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/social-circle.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/body-fitness.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/body-energy.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/mind-innergame.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/mind-abundance.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/action-3second.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dayue.tech/articles/action-macklife.html</loc><priority>0.7</priority></url>
   <url><loc>https://dayue.tech/articles/mindset.html</loc><priority>0.7</priority></url>
   <url><loc>https://dayue.tech/articles/chat.html</loc><priority>0.7</priority></url>
   <url><loc>https://dayue.tech/articles/date.html</loc><priority>0.7</priority></url>
   <url><loc>https://dayue.tech/articles/approach.html</loc><priority>0.7</priority></url>
   <url><loc>https://dayue.tech/articles/social.html</loc><priority>0.7</priority></url>
-  <url><loc>https://dayue.tech/articles/nanren-30sui.html</loc><priority>0.7</priority></url>
-  <url><loc>https://dayue.tech/articles/shejiao.html</loc><priority>0.7</priority></url>
-  <url><loc>https://dayue.tech/articles/shit-test.html</loc><priority>0.7</priority></url>
-  <url><loc>https://dayue.tech/articles/signals.html</loc><priority>0.7</priority></url>
-  <url><loc>https://dayue.tech/articles/social-circle.html</loc><priority>0.7</priority></url>
-  <url><loc>https://dayue.tech/articles/style.html</loc><priority>0.7</priority></url>
-  <url><loc>https://dayue.tech/articles/yangzhou-chedidai.html</loc><priority>0.8</priority></url>
-  <url><loc>https://dayue.tech/articles/yidaiyangdai-shangan.html</loc><priority>0.8</priority></url>
 </urlset>
