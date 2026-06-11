@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UP 男性成长 · 情感 · 成长 · 融资咨询</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"Helvetica Neue","PingFang SC",sans-serif;background:#fff;color:#1d1d1f;line-height:1.6;-webkit-font-smoothing:antialiased}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid #f0f0f0}
+.nav-inner{max-width:980px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;height:52px}
+.nav-inner .logo{font-size:18px;font-weight:600;letter-spacing:1px;color:#1d1d1f;text-decoration:none}
+.nav-inner a{color:#86868b;text-decoration:none;font-size:13px;margin-left:24px;transition:color .2s}
+.nav-inner a:hover{color:#1d1d1f}
+.hero{max-width:750px;margin:0 auto;padding:100px 24px 80px;text-align:center}
+.hero h1{font-size:44px;font-weight:700;letter-spacing:-.5px;color:#1d1d1f;margin-bottom:16px;line-height:1.2}
+.hero p{font-size:18px;color:#86868b;max-width:600px;margin:0 auto;line-height:1.6}
+.section{max-width:980px;margin:0 auto;padding:80px 24px}
+.section-title{text-align:center;margin-bottom:60px}
+.section-title h2{font-size:32px;font-weight:700;letter-spacing:-.3px;color:#1d1d1f;margin-bottom:8px}
+.section-title p{font-size:16px;color:#86868b}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:768px){.grid3{grid-template-columns:1fr}}
+.card{background:#f5f5f7;border-radius:16px;padding:32px;transition:all .2s}
+.card:hover{background:#eeeef0}
+.card .icon{font-size:36px;margin-bottom:16px}
+.card h3{font-size:18px;font-weight:600;color:#1d1d1f;margin-bottom:8px}
+.card p{font-size:14px;color:#86868b;line-height:1.6}
+.card .tag{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;margin-top:12px;font-weight:500}
+.tag-green{background:#e8f5e9;color:#2e7d32}
+.tag-pink{background:#fce4ec;color:#c62828}
+.tag-blue{background:#e3f2fd;color:#1565c0}
+.tag-gold{background:#fff8e1;color:#f57f17}
+.card-highlight{border:2px solid #f59e0b;background:#fffbeb;position:relative}
+.card-highlight:hover{background:#fff8e1}
+.card-highlight .badge{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#f59e0b;color:#fff;padding:2px 16px;border-radius:20px;font-size:12px;font-weight:600}
+.consult-box{background:#1d1d1f;border-radius:16px;padding:48px;text-align:center;max-width:600px;margin:0 auto;color:#fff}
+.consult-box h3{font-size:22px;font-weight:600;margin-bottom:8px}
+.consult-box p{font-size:14px;color:#aaa;margin-bottom:24px;line-height:1.6}
+.consult-box .btn{display:inline-block;background:#f59e0b;color:#1d1d1f;padding:12px 40px;border-radius:24px;text-decoration:none;font-size:15px;font-weight:600;transition:opacity .2s}
+.consult-box .btn:hover{opacity:.85}
+.consult-box .note{font-size:12px;color:#666;margin-top:16px}
+.articles{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:700px;margin:0 auto}
+@media(max-width:640px){.articles{grid-template-columns:1fr}}
+.articles a{display:block;padding:20px;background:#f5f5f7;border-radius:12px;text-decoration:none;color:#1d1d1f;transition:background .2s}
+.articles a:hover{background:#eeeef0}
+.articles a .date{font-size:12px;color:#aaa}
+.articles a h4{font-size:15px;font-weight:600;margin:4px 0;line-height:1.4}
+.articles a p{font-size:13px;color:#86868b}
+.steps{max-width:700px;margin:0 auto;padding:0}
+.steps li{display:flex;align-items:flex-start;gap:16px;padding:20px 0;border-bottom:1px solid #f0f0f0;list-style:none}
+.steps li:last-child{border:0}
+.steps .num{width:32px;height:32px;border-radius:50%;background:#1d1d1f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;flex-shrink:0}
+.steps .text h4{font-size:15px;font-weight:600;margin-bottom:2px}
+.steps .text p{font-size:13px;color:#86868b}
+.flow{text-align:center;margin-top:40px}
+.flow .arrow{display:inline-block;margin:0 20px;color:#ccc;font-size:20px}
+@media(max-width:600px){.flow .arrow{display:block;margin:8px 0;transform:rotate(90deg)}}
+.flow-item{display:inline-block;background:#f5f5f7;padding:12px 24px;border-radius:12px}
+.flow-item strong{display:block;font-size:14px}
+.flow-item span{font-size:12px;color:#86868b}
+.small-title{text-align:center;font-size:14px;color:#86868b;margin-bottom:24px;letter-spacing:2px;text-transform:uppercase}
+.divider{max-width:200px;margin:0 auto;border:0;border-top:1px solid #e8e8ea}
+footer{text-align:center;padding:40px 24px;color:#86868b;font-size:13px}
+footer a{color:#86868b;text-decoration:none}
+footer a:hover{color:#1d1d1f}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">UP</a>
+    <div>
+      <a href="#finance">融资</a>
+      <a href="#emotion">情感</a>
+      <a href="#growth">成长</a>
+      <a href="#consult">咨询</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>男人遇到坎，不是能力问题<br>是没找到对的资源</h1>
+  <p>融资咨询 · 情感关系 · 个人成长<br>我们从你最急迫的问题开始解决</p>
+</div>
+
+<hr class="divider">
+
+<div class="section" id="finance">
+  <div class="section-title">
+    <h2>融资咨询服务</h2>
+    <p>个人及小微企业融资方案定制 · 扬州本地服务</p>
+  </div>
+
+  <div class="grid3">
+    <div class="card card-highlight">
+      <div class="badge">最热门</div>
+      <div class="icon">🚗</div>
+      <h3>车抵贷咨询</h3>
+      <p>不押车，装GPS就行，车你继续开。额度3-50万，最快当天放款。有车就能做，征信花了也可以聊。</p>
+      <span class="tag tag-gold">融资方案</span>
+    </div>
+    <div class="card">
+      <div class="icon">🏪</div>
+      <h3>经营贷咨询</h3>
+      <p>个体工商户、小微企业主资金周转方案。营业执照即可，额度10-100万，期限灵活。</p>
+      <span class="tag tag-green">企业融资</span>
+    </div>
+    <div class="card">
+      <div class="icon">💳</div>
+      <h3>个人信用咨询</h3>
+      <p>负债优化、征信修复建议、网贷置换方案。帮你把高利息债务换成低利息的。</p>
+      <span class="tag tag-blue">债务优化</span>
+    </div>
+  </div>
+
+  <div class="flow">
+    <div class="flow-item"><strong>在线咨询</strong><span>说明你的情况</span></div>
+    <span class="arrow">→</span>
+    <div class="flow-item"><strong>方案定制</strong><span>匹配最优方案</span></div>
+    <span class="arrow">→</span>
+    <div class="flow-item"><strong>合作机构放款</strong><span>持牌机构操作</span></div>
+    <span class="arrow">→</span>
+    <div class="flow-item"><strong>资金到账</strong><span>最快当天</span></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section" id="emotion">
+  <div class="section-title">
+    <h2>情感关系</h2>
+    <p>从吸引到经营，理解人与人之间真实的连接</p>
+  </div>
+  <div class="grid3">
+    <div class="card">
+      <div class="icon">💬</div>
+      <h3>社交与吸引力</h3>
+      <p>不是套路。一个人状态对了，吸引力自然就有了。</p>
+      <span class="tag tag-pink">关系</span>
+    </div>
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>长期关系经营</h3>
+      <p>学会沟通、理解差异、共同成长，才是成熟的关系。</p>
+      <span class="tag tag-pink">经营</span>
+    </div>
+    <div class="card">
+      <div class="icon">🔄</div>
+      <h3>分手复盘</h3>
+      <p>从失败关系里学到什么，比急着投入下一段重要。</p>
+      <span class="tag tag-pink">成长</span>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section" id="growth">
+  <div class="section-title">
+    <h2>个人成长</h2>
+    <p>30岁不是终点，是真正开始理解自己的起点</p>
+  </div>
+  <div class="grid3">
+    <div class="card">
+      <div class="icon">💪</div>
+      <h3>身体管理</h3>
+      <p>每天30分钟，不需要健身房。坚持三个月，变化你自己都想不到。</p>
+      <span class="tag tag-blue">健康</span>
+    </div>
+    <div class="card">
+      <div class="icon">🧠</div>
+      <h3>认知升级</h3>
+      <p>改变命运的不是运气，是认知。每天读一点，一年后脱胎换骨。</p>
+      <span class="tag tag-blue">思维</span>
+    </div>
+    <div class="card">
+      <div class="icon">📌</div>
+      <h3>执行力系统</h3>
+      <p>你不是懒，是缺少一个适合自己的系统。简单的方法，帮你真正行动起来。</p>
+      <span class="tag tag-blue">行动</span>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section" id="consult">
+  <div class="section-title">
+    <h2>咨询流程</h2>
+    <p>简单三步，不耽误你时间</p>
+  </div>
+  <ul class="steps">
+    <li>
+      <div class="num">1</div>
+      <div class="text">
+        <h4>添加微信 / 在线留言</h4>
+        <p>告诉我你的情况和需求 — 融资、情感、还是成长方向。</p>
+      </div>
+    </li>
+    <li>
+      <div class="num">2</div>
+      <div class="text">
+        <h4>免费初步沟通</h4>
+        <p>15-30分钟沟通，了解你的具体情况，判断是否能帮到你。</p>
+      </div>
+    </li>
+    <li>
+      <div class="num">3</div>
+      <div class="text">
+        <h4>定制方案 + 跟踪</h4>
+        <p>确定方案后推进执行，过程中随时调整，直到问题解决。</p>
+      </div>
+    </li>
+  </ul>
+
+  <div class="consult-box">
+    <h3>首次咨询免费</h3>
+    <p>添加微信或留言预约，扬州本地可面谈</p>
+    <a class="btn" href="#">立即预约</a>
+    <p class="note">线上咨询 / 扬州面谈均可 · 隐私保障</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">
+    <h2>最新文章</h2>
+  </div>
+  <div class="articles">
+    <a href="#">
+      <div class="date">2026.06.11</div>
+      <h4>不押车贷到底靠不靠谱？</h4>
+      <p>一个扬州从业者的实话</p>
+    </a>
+    <a href="#">
+      <div class="date">2026.06.10</div>
+      <h4>负债10万的生活自救指南</h4>
+      <p>一步一步来，能走出来</p>
+    </a>
+    <a href="#">
+      <div class="date">2026.06.09</div>
+      <h4>追女生最常犯的三个错误</h4>
+      <p>不是钱的问题，是思路的问题</p>
+    </a>
+    <a href="#">
+      <div class="date">2026.06.08</div>
+      <h4>30岁后，什么能力最重要</h4>
+      <p>不是赚钱，是这四件事</p>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <p>UP 男性成长 · 融资咨询 · 情感关系 · 个人成长</p>
+  <p style="margin-top:4px"><a href="#">关于</a> · <a href="#">联系</a> · 首次咨询免费</p>
+</footer>
+
+</body>
+</html>
