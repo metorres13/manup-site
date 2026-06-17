@@ -109,13 +109,21 @@ def inject_head(content, page):
         content = content.replace("</title>", f"</title>\n{canonical}")
         modifications.append("canonical")
 
-    # 2b. og:image
+    # 2b. og:image - 在 <meta name="robots"> 后插入，或用 </head> 兜底
     if 'property="og:image"' not in content and 'name="og:image"' not in content:
-        og_img = f'  <meta property="og:image" content="{SITE_URL}{OG_IMAGE}">'
-        content = content.replace("<!-- END SEO -->", f"<!-- OG IMAGE -->\n{og_img}\n<!-- END SEO -->")
-        modifications.append("og:image")
+        og_img = f'  <meta property="og:image" content="{SITE_URL}{OG_IMAGE}">\n'
+        # 优先在现有 SEO 区块内插入
+        if "<!-- END SEO -->" in content:
+            content = content.replace("<!-- END SEO -->", og_img + "<!-- END SEO -->")
+            modifications.append("og:image")
+        elif '<meta name="robots"' in content:
+            content = content.replace('<meta name="robots"', og_img + '<meta name="robots"')
+            modifications.append("og:image")
+        elif "</head>" in content:
+            content = content.replace("</head>", og_img + "</head>")
+            modifications.append("og:image")
 
-    # 2c. JSON-LD
+    # 2c. JSON-LD - 在 og:image 后插入，或用 </head> 兜底
     if 'application/ld+json' not in content:
         is_index = page["file"] == "index.html"
         article_name = page.get("name", "")
@@ -164,7 +172,13 @@ def inject_head(content, page):
 
         ld_html = "  <script type=\"application/ld+json\">\n" + \
             json.dumps(ld if len(ld) > 1 else ld[0], ensure_ascii=False, indent=2) + "\n  </script>"
-        content = content.replace("<!-- END SEO -->", f"<!-- JSON-LD -->\n{ld_html}\n<!-- END SEO -->")
+
+        # 插入 JSON-LD: 在 <!-- END SEO --> 后，或在 </head> 前
+        insert_after = "<!-- END SEO -->" if "<!-- END SEO -->" in content else "</head>"
+        if insert_after == "</head>":
+            content = content.replace("</head>", f"<!-- JSON-LD -->\n{ld_html}\n</head>")
+        else:
+            content = content.replace("<!-- END SEO -->", f"<!-- JSON-LD -->\n{ld_html}\n<!-- END SEO -->")
         modifications.append("JSON-LD")
 
     # 2d. Baidu 自动推送
