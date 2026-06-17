@@ -101,6 +101,16 @@ li{font-size:15px;margin-bottom:8px;color:#333}
 ]
   </script>
   <!-- BAIDU TONGJI ID: 填入百度统计 ID 后可开启 -->
+  <!-- Baidu 统计 -->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?9e4aa7d5d5690793ee610ce9fd7db7f4";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
 </head>
 <body>
 <a class="back" href="../index.html">← 返回首页</a>
@@ -182,6 +192,7 @@ function showQR(){document.getElementById('qrOverlay').classList.add('show');doc
 function hideQR(e){if(e&&e.target!==document.getElementById('qrOverlay'))return;document.getElementById('qrOverlay').classList.remove('show');document.body.style.overflow='';}
 function copyWechat(){navigator.clipboard.writeText('weiona13').then(function(){var m=document.getElementById('copiedMsg');m.style.display='block';setTimeout(function(){m.style.display='none';},2000);});}
 </script>
+
 
 
 

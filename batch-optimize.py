@@ -20,7 +20,7 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 SITE_URL = "https://dayue.tech"
 WEIXIN_ID = "weiona13"
 OG_IMAGE = "/og-image.jpg"  # 请创建 1200×630 的 og:image 放到 manup-site 根目录
-BAIDU_TONGJI_ID = ""  # 百度统计 ID，有就填，留空则只加注释占位
+BAIDU_TONGJI_ID = "9e4aa7d5d5690793ee610ce9fd7db7f4"  # 百度统计 ID
 
 # --- 分类映射 (前缀 → 中文分类名) ---
 CATEGORY = {
