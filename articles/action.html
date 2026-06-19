@@ -105,7 +105,13 @@ footer{text-align:center;padding:40px 24px;color:#86868b;font-size:13px}
 </head>
 <body>
 <nav><div class="nav-inner"><a href="/" class="logo">UP</a><div><a href="/#finance">资金</a><a href="/#emotion">情感</a><a href="/#growth">成长</a><a href="/#articles">文章</a></div></div></nav>
-<div class="hero"><h1>📌 执行力系统</h1><p>谜男的三秒法则不是为了搭讪用的——它是一种完整的人生执行框架。你不是懒，你是缺一个不需要思考的行动开关。</p></div>
+<div class="hero">
+<div style="max-width:720px;margin:0 auto;padding:16px 24px 0;font-size:13px;color:#999;">
+  <a href="https://dayue.tech/" style="color:#06c;text-decoration:none;">首页</a>
+  <span style="margin:0 6px;">›</span>
+  <span>📌 执行力系统</span>
+</div>
+<h1>📌 执行力系统</h1><p>谜男的三秒法则不是为了搭讪用的——它是一种完整的人生执行框架。你不是懒，你是缺一个不需要思考的行动开关。</p></div>
 <div class="back"><a href="/#growth">← 回到首页</a></div>
 <div class="articles">
   <a href="/articles/action-3second.html"><div class="info"><span class="tag tg3">核心</span><h3>三秒法则不是搭讪技巧，是人生执行系统</h3><p>在你大脑还没编好借口之前，身体已经在动了。拖延的敌人不是懒惰，是"启动摩擦"。</p></div><span class="arrow">→</span></a>
@@ -113,5 +119,23 @@ footer{text-align:center;padding:40px 24px;color:#86868b;font-size:13px}
   <a href="/articles/social-circle.html"><div class="info"><span class="tag tg3">关联</span><h3>社交圈太小？从零建立自己的圈子</h3><p>锚点 → 参与 → 组织，一步步建圈子的完整路径图。</p></div><span class="arrow">→</span></a>
 </div>
 <footer><p>UP 男性成长 · 扬州</p></footer>
+
+<!-- Float WeChat -->
+<style>
+.float-wx{position:fixed;bottom:20px;right:20px;z-index:9999;background:#07c160;color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.3);display:flex;align-items:center;gap:8px;cursor:pointer;transition:transform .2s,opacity .3s;border:none;font-family:-apple-system,"Helvetica Neue","PingFang SC",sans-serif}
+.float-wx:hover{transform:scale(1.05)}
+.float-wx .wx-icon{font-size:20px}
+.float-wx .wx-close{position:absolute;top:-8px;right:-8px;background:#666;color:#fff;border-radius:50%;width:20px;height:20px;font-size:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none}
+@media(max-width:768px){.float-wx{bottom:16px;right:16px;padding:10px 16px;font-size:13px}}
+</style>
+<div class="float-wx" id="floatWx" onclick="copyWx()">
+  <span class="wx-icon">💬</span>
+  <span>免费咨询 weiona13</span>
+  <button class="wx-close" onclick="event.stopPropagation();document.getElementById('floatWx').style.display='none'">×</button>
+</div>
+<script>
+function copyWx(){navigator.clipboard.writeText("weiona13").then(()=>{const t=document.getElementById("floatWx");t.innerHTML='<span>✅ 已复制微信号，打开微信粘贴</span>';setTimeout(()=>{t.innerHTML='<span class="wx-icon">💬</span><span>免费咨询 weiona13</span><button class="wx-close" onclick="event.stopPropagation();document.getElementById(\'floatWx\').style.display=\'none\'">×</button>'},3000)})}
+</script>
+
 </body>
 </html>
