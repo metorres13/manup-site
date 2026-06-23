@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>扬州车抵贷 — 不押车当天放款 · 资金周转 · UP 男性成长</title>
   <link rel="canonical" href="https://dayue.tech/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 
 <!-- SEO -->
   <meta name="baidu-site-verification" content="codeva-eYDCptenb5" />
@@ -37,6 +38,37 @@
       "telephone": "+86-WeChat-weiona13",
       "contactType": "customer service"
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "扬州车抵贷怎么办理？流程是什么？",
+        "acceptedAnswer": {"@type": "Answer", "text": "三步：1）在线评估，提供车辆信息线上估算额度，约10分钟；2）验车签约，带身份证、行驶证、登记证书，扬州本地可上门验车，当天完成；3）装GPS+放款，不押车装GPS后车继续开，上午办完下午到账，最快当天放款。"}
+      },
+      {
+        "@type": "Question",
+        "name": "征信不好能办扬州车抵贷吗？",
+        "acceptedAnswer": {"@type": "Answer", "text": "能。车抵贷看车不看征信，征信花了、有逾期也能办，有车就能聊。额度3-50万。"}
+      },
+      {
+        "@type": "Question",
+        "name": "车抵贷的GPS什么时候拆除？要收费吗？",
+        "acceptedAnswer": {"@type": "Answer", "text": "还清当天拆除GPS，不收额外费用。额度3-50万，月息八厘到一分五。"}
+      },
+      {
+        "@type": "Question",
+        "name": "扬州车抵贷放款要多久？",
+        "acceptedAnswer": {"@type": "Answer", "text": "最快当天到账。上午办完手续下午放款，不押车，装GPS后车继续开。"}
+      },
+      {
+        "@type": "Question",
+        "name": "验车需要带什么材料？",
+        "acceptedAnswer": {"@type": "Answer", "text": "带身份证、行驶证、登记证书。扬州本地可上门验车。"}
+      }
+    ]
   }
 ]
   </script>
@@ -110,9 +142,12 @@ hr.divider{max-width:200px;margin:0 auto;border:0;border-top:1px solid #e8e8ea}
 .qr-popup .close-btn{position:absolute;top:12px;right:16px;font-size:24px;color:#aaa;cursor:pointer;border:none;background:none;line-height:1}
 .qr-popup .close-btn:hover{color:#1d1d1f}
 .qr-popup .copied-msg{color:#2e7d32;font-size:12px;margin-top:6px;display:none}
-
-/* 关键词云 */
-.kw-section{display:none}
+/* 悬浮咨询按钮 */
+.float-cta{position:fixed;bottom:20px;right:20px;z-index:9998;background:#07c160;color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:600;box-shadow:0 4px 16px rgba(7,193,96,.4);display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;transition:transform .2s;border:none;font-family:inherit;line-height:1.3}
+.float-cta:hover{transform:scale(1.05)}
+.float-cta .fc-sub{font-size:11px;color:#e8f5e9;font-weight:400}
+.float-cta .fc-close{position:absolute;top:-8px;right:-8px;background:#666;color:#fff;border-radius:50%;width:20px;height:20px;font-size:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;line-height:1}
+@media(max-width:768px){.float-cta{bottom:16px;right:16px;padding:10px 16px;font-size:13px}}
 </style>
   <!-- Baidu 自动推送 -->
   <script>
@@ -145,6 +180,7 @@ hr.divider{max-width:200px;margin:0 auto;border:0;border-top:1px solid #e8e8ea}
       <a href="#finance">资金</a>
       <a href="#emotion">情感</a>
       <a href="#growth">成长</a>
+      <a href="#banks">银行</a>
       <a href="#articles">文章</a>
       <a href="javascript:void(0)" onclick="showQR()">点我咨询</a>
     </div>
@@ -154,7 +190,8 @@ hr.divider{max-width:200px;margin:0 auto;border:0;border-top:1px solid #e8e8ea}
 <div class="hero">
   <h1>男人遇到坎<br>不是能力问题，是没找对资源</h1>
   <p>资金周转 · 情感关系 · 个人成长<br>我们从你最急迫的问题开始解决<br><small style="font-size:13px;color:#aaa">具体放款由合作持牌机构操作</small></p>
-  <a class="btn" href="javascript:void(0)" onclick="showQR()">点我咨询</a>
+  <a class="btn" href="javascript:void(0)" onclick="showQR()">免费评估额度</a>
+  <a class="btn" href="tel:15952779025" style="margin-left:12px;background:#fff;color:#1d1d1f;border:2px solid #1d1d1f;">📞 15952779025</a>
 </div>
 
 <hr class="divider">
@@ -235,7 +272,7 @@ hr.divider{max-width:200px;margin:0 auto;border:0;border-top:1px solid #e8e8ea}
 
 <hr class="divider">
 
-<div class="section" id="finance">
+<div class="section" id="banks">
   <div class="section-title">
     <h2 style="color:#1d1d1f;">🏦 银行产品攻略</h2>
     <p>扬州各大银行贷款产品详解 + 征信花/查询多的替代方案</p>
@@ -375,126 +412,6 @@ hr.divider{max-width:200px;margin:0 auto;border:0;border-top:1px solid #e8e8ea}
 
 </div>
 
-<div class="kw-section">
-<p class="kw-title">扬州贷款 · 常见搜索词</p>
-<div class="kw-tags">
-<span>扬州征信不好能借到钱吗</span>
-<span>扬州查征信查太多了还能贷款吗</span>
-<span>扬州信用卡有过逾期现在急用钱怎么办</span>
-<span>扬州贷款老是被拒是什么原因</span>
-<span>扬州网贷借不出来了哪里还能借</span>
-<span>扬州黑名单怎么才能借到钱</span>
-<span>扬州只要身份证马上能拿到钱的</span>
-<span>扬州不让老婆知道怎么贷款</span>
-<span>扬州不需要老公签字就能借钱</span>
-<span>扬州不上门直接下款的</span>
-<span>扬州借钱不给家里打电话的口子</span>
-<span>扬州私密借钱当天下款</span>
-<span>扬州利息太高了还不起了怎么办</span>
-<span>扬州怎么把网贷换成利息低的</span>
-<span>扬州欠了十几万怎么跟银行谈分期</span>
-<span>扬州房贷利息太高了怎么降下来</span>
-<span>扬州信用卡还不上了能只还本金吗</span>
-<span>扬州每个月还款压力太大怎么解决</span>
-<span>扬州交了公积金能贷多少钱出来</span>
-<span>扬州房子房贷没还完还能不能抵押借钱</span>
-<span>扬州有营业执照怎么弄几万块钱周转</span>
-<span>扬州刚开的店没有流水能借钱吗</span>
-<span>扬州全款车怎么借钱开走</span>
-<span>江都邗江仪征高邮开厂缺钱去哪找低息</span>
-<span>扬州哪家贷款中介不收前期费用</span>
-<span>扬州正规的借钱公司地址在哪里</span>
-<span>扬州本地靠谱的帮忙办理贷款的人<span>扬州刚办的营业执照怎么贷十几万</span>
-<span>扬州个体户没有对公流水怎么弄税贷</span>
-<span>扬州建材商做工程垫资没钱了去哪找利息低的</span>
-<span>扬州烟酒店有烟草证怎么申请银行备用金</span>
-<span>江都开厂做生意亏了急需50万怎么弄</span>
-<span>广陵区小微企业无抵押贷款怎么申请</span>
-<span>扬州厂房抵押贷款哪个银行利息最低2026</span>
-<span>扬州年底给工人发工资没钱了怎么办</span>
-<span>扬州流水大但是利润薄的店怎么从银行拿钱</span>
-<span>扬州公司没交税能做企业信用贷吗</span>
-<span>扬州公积金一个月交800能贷多少钱出来</span>
-<span>扬州全款买的安置房拆迁房怎么抵押最划算</span>
-<span>扬州按揭房还没还完能再贷一笔出来吗</span>
-<span>扬州房贷利息5.8怎么转成3厘的</span>
-<span>扬州打卡工资5000能做哪家银行的消费贷</span>
-<span>扬州按揭车不押车借钱哪里正规</span>
-<span>邗江区买二手房首付凑不够怎么办</span>
-<span>扬州体制内国企员工偷偷借钱不被单位发现的口子</span>
-<span>扬州征信花了网贷都被拒了哪里还能搞到钱</span>
-<span>扬州哪里可以私人借钱拿现金救急</span>
-<span>扬州今天马上能拿到钱的口子有哪些</span>
-<span>扬州只看身份证不看大数据的借款平台</span>
-<span>扬州不上征信的借钱平台有哪些</span>
-<span>扬州借钱不给家里老婆打电话的渠道单签</span>
-<span>扬州本地私人放款联系方式真实可靠的</span>
-<span>扬州信用卡欠了十几万还不起了会坐牢吗</span>
-<span>扬州网贷逾期了怎么拦截催收防爆通讯录</span>
-<span>扬州微粒贷借呗逾期被起诉了去法院怎么说</span>
-<span>扬州有没有正规不坑人的停息挂账办理公司</span>
-<span>扬州美团借钱还不上了怎么申请延期一年</span>
-<span>扬州欠了一屁股债怎么规划才能上岸</span>
-<span>扬州征信全花了还能做债务置换吗</span>
-<span>扬州工资卡被法院强制执行冻结了怎么解开</span>
-<span>扬州收到12368短信说要起诉我是真的吗</span>
-<span>扬州找中介办贷款一般收几个点手续费合法</span>
-<span>扬州不收前期费用的贷款业务员电话</span>
-<span>扬州哪些贷款中介公司是骗人的黑中介</span>
-<span>扬州正规银行贷款代办服务哪家最靠谱</span>
-<span>扬州垫资过桥一天多少利息算正常行情</span>
-<span>别人说能帮我洗白扬州本地的逾期征信是不是诈骗</span>
-<span>扬州借钱</span>
-<span>扬州哪里能借到钱</span>
-<span>扬州急用钱哪里借最快</span>
-<span>扬州个人借钱急用当天放款</span>
-<span>扬州私人放贷电话微信</span>
-<span>扬州哪里可以私人借钱</span>
-<span>扬州正规借钱平台</span>
-<span>扬州小额借钱</span>
-<span>扬州身上一分钱没有了去哪借</span>
-<span>扬州马上要交房租没钱怎么办</span>
-<span>扬州还不上信用卡了怎么办</span>
-<span>扬州车贷房贷还不上怎么办</span>
-<span>扬州今天急需5万块钱哪里能借到</span>
-<span>扬州明天就要用钱加急哪里能办</span>
-<span>扬州10分钟放款的平台</span>
-<span>扬州24小时能借钱的地方</span>
-<span>贷款被拒了哪里还能借扬州</span>
-<span>扬州去过好几家银行都批不下来</span>
-<span>扬州这里查征信那里查征信都过不了</span>
-<span>扬州征信真实花了哪里还能试试</span>
-<span>扬州有没有不看征信的车抵贷</span>
-<span>扬州不看负债的抵押贷款</span>
-<span>扬州大数据花了也能借的平台</span>
-<span>扬州有当前逾期还能借吗</span>
-<span>扬州车抵贷不押车是真的吗</span>
-<span>扬州押车借钱哪里正规</span>
-<span>扬州按揭车能再借钱吗</span>
-<span>扬州车子抵押贷款需要什么手续</span>
-<span>扬州车抵贷不看车龄的车</span>
-<span>扬州全款车当天拿钱去哪办</span>
-<span>扬州车抵贷利息一般多少</span>
-<span>扬州车贷还清了怎么二次抵押</span>
-<span>扬州网贷催收说要上门是真的吗</span>
-<span>扬州催收电话打给家人了怎么办</span>
-<span>扬州欠了网贷快扛不住了想死</span>
-<span>扬州欠网贷怎么跟家里坦白</span>
-<span>扬州每天被催收电话轰炸怎么解决</span>
-<span>扬州网贷逾期一年了会怎么样</span>
-<span>扬州连累了家人想上岸怎么搞</span>
-<span>扬州负债50万还有机会翻身吗</span>
-<span>扬州贷款中介一般怎么收费</span>
-<span>扬州正规贷款公司都在哪里办公</span>
-<span>扬州办贷款先交钱的是不是骗子</span>
-<span>扬州贷款收了前期费用能追回来吗</span>
-<span>扬州有没有靠谱的贷款中介推荐</span>
-<span>扬州做贷款的哪家口碑好</span>
-<span>扬州什么情况下会被套路贷</span>
-<span>扬州办理贷款被骗了去哪里报警</span>
-</span>
-</div>
-</div>
 <footer>
   <p>UP 男性成长 · 扬州</p>
   <p style="margin-top:8px;font-size:12px;">扫码点我咨询</p>
@@ -514,10 +431,18 @@ hr.divider{max-width:200px;margin:0 auto;border:0;border-top:1px solid #e8e8ea}
   </div>
 </div>
 
+<!-- 悬浮咨询按钮 -->
+<div class="float-cta" id="floatCta" onclick="showQR()">
+  <span>💬 免费评估</span>
+  <span class="fc-sub">15952779025</span>
+  <button class="fc-close" onclick="event.stopPropagation();document.getElementById('floatCta').style.display='none'">×</button>
+</div>
+
 <script>
 function showQR(){document.getElementById('qrOverlay').classList.add('show');document.body.style.overflow='hidden';}
 function hideQR(e){if(e&&e.target!==document.getElementById('qrOverlay'))return;document.getElementById('qrOverlay').classList.remove('show');document.body.style.overflow='';}
 function copyWechat(){navigator.clipboard.writeText('weiona13').then(function(){var m=document.getElementById('copiedMsg');m.style.display='block';setTimeout(function(){m.style.display='none';},2000);});}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){hideQR();}});
 </script>
 
 </body>
