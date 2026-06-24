@@ -75,12 +75,7 @@ li{margin:6px 0}
     "@type": "Organization",
     "name": "UP 男性成长",
     "url": "https://dayue.tech",
-    "description": "多个平台同时逾期，拆东墙补西墙已经补不动了。强制上岸不是放弃还款，是换一种更有尊严的方式把债还完。",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+86-WeChat-weiona13",
-      "contactType": "customer service"
-    }
+    "description": "多个平台同时逾期，拆东墙补西墙已经补不动了。强制上岸不是放弃还款，是换一种更有尊严的方式把债还完。"
   },
   {
     "@context": "https://schema.org",
@@ -214,8 +209,39 @@ li{margin:6px 0}
   }
   </script>
 
+<style>
+/* compliance-refactor-v1 */
+.risk-banner{background:#fff5f5;border-bottom:1px solid #ffd6d6;color:#b71c1c;font-size:13px;line-height:1.7;padding:8px 20px;text-align:center}
+.risk-banner strong{color:#b71c1c}
+.disclaimer{max-width:720px;margin:32px auto;padding:20px 24px;background:#f5f5f7;border-radius:12px;font-size:12px;color:#86868b;line-height:1.7}
+.disclaimer p{margin:4px 0}.disclaimer strong{color:#1d1d1f}
+.lead-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center}
+.lead-overlay.show{display:flex}
+.lead-popup{background:#fff;border-radius:16px;padding:28px 24px;max-width:360px;width:calc(100% - 32px);position:relative;box-shadow:0 12px 40px rgba(0,0,0,.2)}
+.lead-popup .close-btn{position:absolute;top:10px;right:14px;font-size:24px;color:#aaa;cursor:pointer;border:none;background:none;line-height:1}
+.lead-popup h3{font-size:17px;font-weight:600;margin-bottom:6px}
+.lead-popup .lead-sub{font-size:13px;color:#86868b;margin-bottom:16px}
+.lead-popup form label{display:block;font-size:12px;color:#666;margin-bottom:12px}
+.lead-popup form input{display:block;width:100%;margin-top:6px;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;box-sizing:border-box}
+.lead-popup form input:focus{outline:none;border-color:#1d1d1f}
+.lead-popup form button{width:100%;margin-top:8px;padding:12px;border:none;border-radius:8px;background:#1d1d1f;color:#fff;font-size:15px;font-weight:600;cursor:pointer}
+.lead-popup .lead-note{font-size:11px;color:#bbb;margin-top:12px;line-height:1.6}
+</style>
+<!-- compliance-refactor-v1 -->
+<style>
+.manual{max-height:60vh;overflow-y:auto;font-size:14px;line-height:1.8;color:#1d1d1f;text-align:left;padding-right:4px}
+.manual h4{font-size:14px;font-weight:600;margin:14px 0 6px;color:#1d1d1f}
+.manual ul{padding-left:20px;margin:4px 0}
+.manual li{margin:3px 0;color:#444}
+.manual .m-tip{background:#fff8e1;padding:8px 12px;border-radius:8px;font-size:13px;margin-bottom:8px;color:#8a6d00}
+.manual .m-note{font-size:12px;color:#86868b;margin-top:16px;padding-top:12px;border-top:1px solid #eee}
+</style>
 </head>
 <body>
+<div class="risk-banner">
+⚠️ <strong>风险提示：</strong>本站仅做银行信贷政策与征信知识科普，不持有金融放贷资质，不提供贷款代办、征信修复或资金对接服务，不收取任何费用。借贷有风险，请量力而行。
+</div>
+
 <article>
 <a href="/articles/finance.html">← 资金周转</a>
 
@@ -304,7 +330,7 @@ li{margin:6px 0}
 
 
 <p style="background:#f5f5f7;border-radius:12px;padding:16px 20px;margin:24px 0;font-size:15px;">
-<strong>🚗 急用钱？</strong> 如果你名下有车、征信花了、逾期了、银行不借了——车抵贷是最后一条路。不押车、装个GPS、车继续开、当天到账。<a href="/articles/yangzhou-chedidai.html" style="color:#06c;font-weight:600;">→ 扬州车抵贷全攻略</a>
+<strong>🚗 急用钱？</strong> 如果你名下有车、征信花了、逾期了、银行不借了——车抵贷是最后一条路。不押车、装个GPS、车继续开、当日到账。<a href="/articles/yangzhou-chedidai.html" style="color:#06c;font-weight:600;">→ 扬州车抵贷全攻略</a>
 </p>
 <h2 id="section-7">强制上岸的心理准备</h2>
 <p>上岸过程中，你会经历这些阶段——知道了就不会被击垮：</p>
@@ -317,10 +343,12 @@ li{margin:6px 0}
 <p>你不是第一个经历逾期的人，也不会是最后一个。逾期不是世界末日。逾期是一次强制性的财务和人生重构。</p>
 
 <div class="cta">
-<h3 style="font-size:20px;margin-bottom:8px;">债务压得喘不过气？</h3>
-<p>加微信免费帮你梳理全额债务、把平台分三类、做一份协商优先级清单。不收费，不卖课。</p>
-<a class="btn" href="javascript:void(0)" onclick="showQR()">点我咨询</a>
+  <h3>不确定自己是否符合银行准入条件？</h3>
+  <p>整理了一份《扬州银行贷款准入自查手册》，自查后再去网点，少走弯路。</p>
+  <a class="btn" href="javascript:void(0)" onclick="openLeadForm()">免费评估</a>
+  <div class="cfoot">科普资料 · 免费领取 · 不代办不收费</div>
 </div>
+
 
 
 
@@ -362,23 +390,59 @@ li{margin:6px 0}
 </div>
 </article>
 
-<!-- Float WeChat -->
-<style>
-.float-wx{position:fixed;bottom:20px;right:20px;z-index:9999;background:#07c160;color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.3);display:flex;align-items:center;gap:8px;cursor:pointer;transition:transform .2s,opacity .3s;border:none;font-family:-apple-system,"Helvetica Neue","PingFang SC",sans-serif}
-.float-wx:hover{transform:scale(1.05)}
-.float-wx .wx-icon{font-size:20px}
-.float-wx .wx-close{position:absolute;top:-8px;right:-8px;background:#666;color:#fff;border-radius:50%;width:20px;height:20px;font-size:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none}
-@media(max-width:768px){.float-wx{bottom:16px;right:16px;padding:10px 16px;font-size:13px}}
-</style>
-<div class="float-wx" id="floatWx" onclick="copyWx()">
-  <span class="wx-icon">💬</span>
-  <span>免费咨询 weiona13</span>
-  <span style="font-size:11px;color:#e8f5e9;">📞15952779025</span>
-  <button class="wx-close" onclick="event.stopPropagation();document.getElementById('floatWx').style.display='none'">×</button>
+<div class="disclaimer">
+<p><strong>《风险提示与免责声明》</strong></p>
+<p>本站仅做银行信贷政策、征信知识科普分享，不持有金融放贷资质，不提供贷款代办、征信修复、资金对接服务，不收取任何咨询、代办费用；所有内容仅作知识参考，有资金需求请自行前往各大持牌银行线下网点咨询办理，借贷有风险，量力而行。</p>
+</div>
+<div class="lead-overlay" id="leadOverlay">
+  <div class="lead-popup">
+    <button class="close-btn" onclick="closeLeadForm()">&times;</button>
+    <h3>《扬州银行贷款准入自查手册》</h3>
+    <p class="lead-sub">在线阅读 · 纯科普 · 不收集任何个人信息</p>
+    <div class="manual">
+      <p class="m-tip">📌 本手册帮你对照自查，符合条件再去银行网点办理，少走弯路。</p>
+      <h4>一、基础准入条件</h4>
+      <ul>
+        <li>年龄 18-60 周岁，具有完全民事行为能力</li>
+        <li>扬州本地户籍，或在扬州稳定工作居住（社保/公积金缴存记录）</li>
+        <li>有合法稳定的收入来源</li>
+      </ul>
+      <h4>二、常见贷款类型准入</h4>
+      <ul>
+        <li><strong>公积金贷</strong>：公积金连续缴存 6 个月以上，缴存基数达标</li>
+        <li><strong>个体户经营贷</strong>：营业执照满 1 年，有真实经营流水</li>
+        <li><strong>房抵贷</strong>：名下有产权清晰的房产，房龄、面积符合银行要求</li>
+        <li><strong>车抵贷</strong>：名下车辆产权清晰，评估价值达标</li>
+      </ul>
+      <h4>三、征信自查要点</h4>
+      <ul>
+        <li>近 2 年逾期次数：连三累六是红线</li>
+        <li>近 3 个月征信查询次数：硬查询过多影响审批</li>
+        <li>现有负债率：月供不宜超过月收入 50%</li>
+        <li>征信报告可在中国人民银行征信中心官网免费查询，每年 2 次</li>
+      </ul>
+      <h4>四、办理前准备材料</h4>
+      <ul>
+        <li>身份证、户口本（或居住证）</li>
+        <li>收入证明、近 6 个月银行流水</li>
+        <li>公积金/社保缴存明细（如适用）</li>
+        <li>抵押物权属证明（如适用：房产证、登记证书等）</li>
+      </ul>
+      <h4>五、避坑提醒</h4>
+      <ul>
+        <li>正规银行贷款不会收取"前期手续费""包装费"</li>
+        <li>声称"征信修复""内部渠道删逾期"的均为骗局</li>
+        <li>优先选择国有大行及持牌股份制银行线下网点办理</li>
+      </ul>
+      <p class="m-note">本手册仅为银行信贷政策科普参考，具体准入条件以各银行网点实时政策为准。本站不提供贷款代办、不收取任何费用。</p>
+    </div>
+  </div>
 </div>
 <script>
-function copyWx(){navigator.clipboard.writeText("weiona13").then(()=>{const t=document.getElementById("floatWx");t.innerHTML='<span>✅ 已复制微信号，打开微信粘贴</span>';setTimeout(()=>{t.innerHTML='<span class="wx-icon">💬</span><span>免费咨询 weiona13</span><button class="wx-close" onclick="event.stopPropagation();document.getElementById(\'floatWx\').style.display=\'none\'">×</button>'},3000)})}
+function openLeadForm(){var o=document.getElementById("leadOverlay");o.classList.add("show");document.body.style.overflow="hidden";}
+function closeLeadForm(){document.getElementById("leadOverlay").classList.remove("show");document.body.style.overflow="";}
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeLeadForm();});
+document.getElementById("leadOverlay").addEventListener("click",function(e){if(e.target===this)closeLeadForm();});
 </script>
-
 </body>
 </html>
